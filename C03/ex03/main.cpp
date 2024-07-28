@@ -20,23 +20,23 @@ int main(void)
 {
 	print("****** Create ClapTraps ******");
 	ClapTrap	ClappyClappo("ClappyClappo");
-	ClapTrap::addClapTrap(&ClappyClappo);
+	// ClapTrap::addClapTrap(&ClappyClappo);
 	ScavTrap	Clapster("Clapster");
-	ClapTrap::addClapTrap(&Clapster);
+	// ClapTrap::addClapTrap(&Clapster);
 	ClapTrap	ZappyClap("ZappyClap");
-	ClapTrap::addClapTrap(&ZappyClap);
+	// ClapTrap::addClapTrap(&ZappyClap);
 	ScavTrap	ScavMaster("ScavMaster");
-	ClapTrap::addClapTrap(&ScavMaster);
+	// ClapTrap::addClapTrap(&ScavMaster);
 	ScavTrap	ScavTronix("ScavTronix");
-	ClapTrap::addClapTrap(&ScavTronix);
+	// ClapTrap::addClapTrap(&ScavTronix);
 	ScavTrap	GigaScav("GigaScav");
-	ClapTrap::addClapTrap(&GigaScav);
+	// ClapTrap::addClapTrap(&GigaScav);
 	ScavTrap	ScavBuddy("ScavBuddy");
-	ClapTrap::addClapTrap(&ScavBuddy);
+	// ClapTrap::addClapTrap(&ScavBuddy);
 	FragTrap	FraggyBoy("FraggyBoy");
-	ClapTrap::addClapTrap(&FraggyBoy);
+	// ClapTrap::addClapTrap(&FraggyBoy);
 	DiamondTrap	PreciousTrap("PreciousTrap");
-	ClapTrap::addClapTrap(&PreciousTrap);
+	// ClapTrap::addClapTrap(&PreciousTrap);
 	
 	displayClapTraps();
 	
@@ -81,10 +81,6 @@ int main(void)
 	FraggyBoy.highFivesGuys();
 	
 	displayClapTraps();
-
-
-	std::cout << "%%%%%%%%%%%%%%%%%%%%%%%%%TESTS%%%%%%%%%%%%%%%%%%%%%%%" << std::endl;
-	std::cout << PreciousTrap.getAttackDamage() << std::endl;
 
 	print("****** Detroy Claptraps ******");
 	return (0);

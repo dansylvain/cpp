@@ -39,14 +39,10 @@ void DiamondTrap::whoAmI() {
 
 
 void DiamondTrap::initialize() {
-	std::cout << "varsbefore: " << Name << ", " << this->EnergyPoints << ", " << this->HitPoints << std::endl;
-	std::cout << "varsbefore2: " << Name << ", " << ScavTrap::getEnergyPoints() << ", " << FragTrap::getHitPoints() << std::endl;
-	
-	Name = ClapTrap::Name += "_clap_name";
+		Name = ClapTrap::Name += "_clap_name";
 	EnergyPoints = ScavTrap::getEnergyPoints();
 	HitPoints = FragTrap::getHitPoints();
 	AttackDamage = ScavTrap::getAttackDamage();
-	std::cout << "vars after: " << Name << ", " << this->EnergyPoints << ", " << this->HitPoints << std::endl;
 	}
 
 void	DiamondTrap::DisplayName(std::string str) const {
