@@ -4,6 +4,10 @@
 
 #include "ClapTrap.hpp"
 
+/**========================================================================
+ *                           FRAGTRAP
+ * use override in C++11 if you redefine methods across classes heritance
+ *========================================================================**/
 class FragTrap : virtual 	public ClapTrap {
 	protected:
 		std::string			Name;
