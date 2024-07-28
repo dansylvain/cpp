@@ -5,9 +5,17 @@
  *========================================================================**/
 ScavTrap::ScavTrap() : ClapTrap() {}
 
-ScavTrap::ScavTrap(const std::string& name) : ClapTrap(name), Name(name), HitPoints(90), EnergyPoints(50), AttackDamage(20){}
+ScavTrap::ScavTrap(const std::string& name) : 	ClapTrap(name), 
+												Name(name), 
+												HitPoints(90), 
+												EnergyPoints(50), 
+												AttackDamage(20) {}
 
-ScavTrap::ScavTrap(const ScavTrap &other) : ClapTrap(other) {}
+ScavTrap::ScavTrap(const ScavTrap &other) :	ClapTrap(other), 
+											Name(other.Name),
+											HitPoints(other.HitPoints),
+											EnergyPoints(other.EnergyPoints), 
+											AttackDamage(other.AttackDamage) {}
 
 ScavTrap::~ScavTrap() {};
 	

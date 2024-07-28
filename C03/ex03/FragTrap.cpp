@@ -5,9 +5,17 @@
  *========================================================================**/
 FragTrap::FragTrap() : ClapTrap() {}
  
-FragTrap::FragTrap(const std::string& name) : ClapTrap(name), Name(name), HitPoints(150), EnergyPoints(100), AttackDamage(130) {}
+FragTrap::FragTrap(const std::string& name) : 	ClapTrap(name),
+												Name(name),
+												HitPoints(150),
+												EnergyPoints(100), 
+												AttackDamage(130) {}
 
-FragTrap::FragTrap(const FragTrap &other) : ClapTrap(other) {}
+FragTrap::FragTrap(const FragTrap &other) : ClapTrap(other),
+											Name(other.Name),
+											HitPoints(other.HitPoints), 
+											EnergyPoints(other.EnergyPoints), 
+											AttackDamage(other.AttackDamage) {}
 
 FragTrap::~FragTrap() {
 	DisplayName(" destroyed @@@");};

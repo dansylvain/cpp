@@ -20,26 +20,25 @@ int main(void)
 {
 	print("****** Create ClapTraps ******");
 	ClapTrap	ClappyClappo("ClappyClappo");
-	// ClapTrap::addClapTrap(&ClappyClappo);
 	ScavTrap	Clapster("Clapster");
-	// ClapTrap::addClapTrap(&Clapster);
 	ClapTrap	ZappyClap("ZappyClap");
-	// ClapTrap::addClapTrap(&ZappyClap);
 	ScavTrap	ScavMaster("ScavMaster");
-	// ClapTrap::addClapTrap(&ScavMaster);
 	ScavTrap	ScavTronix("ScavTronix");
-	// ClapTrap::addClapTrap(&ScavTronix);
 	ScavTrap	GigaScav("GigaScav");
-	// ClapTrap::addClapTrap(&GigaScav);
 	ScavTrap	ScavBuddy("ScavBuddy");
-	// ClapTrap::addClapTrap(&ScavBuddy);
 	FragTrap	FraggyBoy("FraggyBoy");
-	// ClapTrap::addClapTrap(&FraggyBoy);
 	DiamondTrap	PreciousTrap("PreciousTrap");
-	// ClapTrap::addClapTrap(&PreciousTrap);
 	
 	displayClapTraps();
+
+	print("******* test: copy *********");
+	ClapTrap	COPYClappyClappo(ClappyClappo);
+	ScavTrap	COPYClapster(Clapster);
+	FragTrap	COPYFraggyBoy(FraggyBoy);
+	DiamondTrap	COPYPreciousTrap(PreciousTrap);
 	
+	displayClapTraps();
+
 	print("******* test: attack *********");
 	Clapster.attack("NonExistingClapTrap");
 	Clapster.attack("");
