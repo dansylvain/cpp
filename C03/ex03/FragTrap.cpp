@@ -45,17 +45,9 @@ void FragTrap::initialize(void) {
 	DisplayName(" created @@@");
 }
 
-// std::string FragTrap::getName(void) const {
-// 	return (Name);
-// }
-
 int	FragTrap::getHitPoints(void) const {
 	return (HitPoints);
 }
-
-// int	FragTrap::getEnergyPoints(void) const {
-	// return (EnergyPoints);
-// }
 
 int	FragTrap::getAttackDamage(void) const {
 	return (AttackDamage);

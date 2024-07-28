@@ -47,19 +47,6 @@ void ScavTrap::initialize(std::string str)
 /**========================================================================
  *                          Geters and Seters
  *========================================================================**/
-
-// std::string ScavTrap::getName(void) const {
-// 	return (Name);
-// }
-
-// int	ScavTrap::getHitPoints(void) const {
-// 	return (HitPoints);
-// }
-
 int	ScavTrap::getEnergyPoints(void) const {
 	return (EnergyPoints);
 }
-
-// int	ScavTrap::getAttackDamage(void) const {
-// 	return (AttackDamage);
-// }

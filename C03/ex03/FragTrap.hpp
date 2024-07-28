@@ -26,7 +26,6 @@ class FragTrap : virtual 	public ClapTrap {
 
 		// std::string		getName(void)			const;
 		int				getHitPoints(void)		const;
-		// int				getEnergyPoints(void)	const;
 		int				getAttackDamage(void)	const;
 
 		// utils methods
