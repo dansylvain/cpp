@@ -3,17 +3,13 @@
 /**========================================================================
  *                           CONSTRUCTORS AND DESTRUCTOR
  *========================================================================**/
-ScavTrap::ScavTrap() : ClapTrap() {
-	initialize(" created***");}
+ScavTrap::ScavTrap() : ClapTrap() {}
 
-ScavTrap::ScavTrap(const std::string& name) : ClapTrap(name) {
-	initialize(" created***");}
+ScavTrap::ScavTrap(const std::string& name) : ClapTrap(name), Name(name), HitPoints(90), EnergyPoints(50), AttackDamage(20){}
 
-ScavTrap::ScavTrap(const ScavTrap &other) : ClapTrap(other) {
-	initialize(" created***");}
+ScavTrap::ScavTrap(const ScavTrap &other) : ClapTrap(other) {}
 
-ScavTrap::~ScavTrap() {
-	DisplayName(" destroyed***");};
+ScavTrap::~ScavTrap() {};
 	
 /**========================================================================
  *                          ASSIGNMENT OPERATOR
@@ -47,3 +43,23 @@ void ScavTrap::initialize(std::string str)
 	ScavTrap::AttackDamage = 20;
 	ScavTrap::DisplayName(str);
 }
+
+/**========================================================================
+ *                          Geters and Seters
+ *========================================================================**/
+
+// std::string ScavTrap::getName(void) const {
+// 	return (Name);
+// }
+
+// int	ScavTrap::getHitPoints(void) const {
+// 	return (HitPoints);
+// }
+
+int	ScavTrap::getEnergyPoints(void) const {
+	return (EnergyPoints);
+}
+
+// int	ScavTrap::getAttackDamage(void) const {
+// 	return (AttackDamage);
+// }

@@ -6,7 +6,7 @@
 #include "FragTrap.hpp"
 
 class DiamondTrap : public ScavTrap, public FragTrap {
-	private:
+	protected:
 		std::string			Name;
 		int					HitPoints;
 		int					EnergyPoints;

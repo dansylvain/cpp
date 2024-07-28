@@ -3,14 +3,11 @@
 /**========================================================================
  *                           CONSTRUCTORS AND DESTRUCTOR
  *========================================================================**/
-FragTrap::FragTrap() : ClapTrap() {
-	initialize();}
+FragTrap::FragTrap() : ClapTrap() {}
  
-FragTrap::FragTrap(const std::string& name) : ClapTrap(name) {
-	initialize();}
+FragTrap::FragTrap(const std::string& name) : ClapTrap(name), Name(name), HitPoints(150), EnergyPoints(100), AttackDamage(130) {}
 
-FragTrap::FragTrap(const FragTrap &other) : ClapTrap(other) {
-	initialize();}
+FragTrap::FragTrap(const FragTrap &other) : ClapTrap(other) {}
 
 FragTrap::~FragTrap() {
 	DisplayName(" destroyed @@@");};
@@ -46,4 +43,20 @@ void FragTrap::initialize(void) {
 	FragTrap::HitPoints = 150;
 	FragTrap::AttackDamage = 30;
 	DisplayName(" created @@@");
+}
+
+// std::string FragTrap::getName(void) const {
+// 	return (Name);
+// }
+
+int	FragTrap::getHitPoints(void) const {
+	return (HitPoints);
+}
+
+// int	FragTrap::getEnergyPoints(void) const {
+	// return (EnergyPoints);
+// }
+
+int	FragTrap::getAttackDamage(void) const {
+	return (AttackDamage);
 }

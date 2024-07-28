@@ -6,7 +6,7 @@ DiamondTrap::DiamondTrap() : ClapTrap(), ScavTrap(), FragTrap() {
 };
 
 DiamondTrap::DiamondTrap(const std::string& name) : ClapTrap(name), ScavTrap(name), FragTrap(name) {
-	DiamondTrap::initialize();
+	initialize();
 	print("### DiamondTrap ", Name,  " created. ###");
 };
 
@@ -39,12 +39,15 @@ void DiamondTrap::whoAmI() {
 
 
 void DiamondTrap::initialize() {
+	std::cout << "varsbefore: " << Name << ", " << this->EnergyPoints << ", " << this->HitPoints << std::endl;
+	std::cout << "varsbefore2: " << Name << ", " << ScavTrap::getEnergyPoints() << ", " << FragTrap::getHitPoints() << std::endl;
+	
 	Name = ClapTrap::Name += "_clap_name";
-	EnergyPoints = ScavTrap::EnergyPoints;
-	HitPoints = FragTrap::HitPoints;
-	AttackDamage = FragTrap::AttackDamage;
-	std::cout << Name << ", " << EnergyPoints << ", " << HitPoints << ", " << AttackDamage << std::endl;
-}
+	EnergyPoints = ScavTrap::getEnergyPoints();
+	HitPoints = FragTrap::getHitPoints();
+	AttackDamage = ScavTrap::getAttackDamage();
+	std::cout << "vars after: " << Name << ", " << this->EnergyPoints << ", " << this->HitPoints << std::endl;
+	}
 
 void	DiamondTrap::DisplayName(std::string str) const {
 	print("### DiamondTrap ", this->getName(), str);

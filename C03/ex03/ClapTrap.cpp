@@ -10,7 +10,7 @@ int 		ClapTrap::count = 0;
  *                           CONSTRUCTORS AND DESTRUCTOR
  *========================================================================**/
 ClapTrap::ClapTrap() : HitPoints(0), EnergyPoints(0), AttackDamage(0) {
-	addClapTrap(this);
+	// addClapTrap(this);
 	print("ClapTrap created.");
 }
 
@@ -18,7 +18,7 @@ ClapTrap::ClapTrap(const std::string& name) : Name(name),
 										HitPoints(10), 
 										EnergyPoints(10), 
 										AttackDamage(0) {
-	addClapTrap(this);
+	// addClapTrap(this);
 	print("ClapTrap ", name, " created.");
 }
 
@@ -26,7 +26,7 @@ ClapTrap::ClapTrap(const ClapTrap &other) : Name(other.Name),
 											HitPoints(other.HitPoints), 
 											EnergyPoints(other.EnergyPoints), 
 											AttackDamage(other.AttackDamage) {
-	addClapTrap(this);
+	// addClapTrap(this);
 	print("ClapTrap ", Name, " created.");
 }
 
@@ -138,13 +138,13 @@ void ClapTrap::beRepaired(unsigned int amount) {
 /**========================================================================
  *                           CLAPTRAP MANAGEMENT METHODS
  *========================================================================**/
-void ClapTrap::addClapTrap(ClapTrap* clapTrap) {
-	if (count < MAX_CLAPTRAPS) {
-		allClapTraps[count++] = clapTrap;
-	} else {
-		print("Error: Maximum number of ClapTraps reached!");
+	void ClapTrap::addClapTrap(ClapTrap* clapTrap) {
+		if (count < MAX_CLAPTRAPS) {
+			allClapTraps[count++] = clapTrap;
+		} else {
+			print("Error: Maximum number of ClapTraps reached!");
+		}
 	}
-}
 
 ClapTrap* ClapTrap::findByName(const std::string& name) {
 	for (int i = 0; i < count; ++i) {
